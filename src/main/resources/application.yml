@@ -1,0 +1,28 @@
+spring:
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    # excluded-view-names:
+    # template-resolver-order:
+    # view-names:
+    
+  jpa:
+    show-sql: true
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      format_sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/thymeleaf?createDatabaseIfNotExist=true&useSSL=false
+    username: root
+    password: r4cc00n

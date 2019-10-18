@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Access Denied</title>
+</head>
+<body>
+    <div class="container">
+        <div class="starter-template">
+            <h1>Acesso negado</h1>
+            <div th:inline="text">Ola, '[[${#httpServletRequest.remoteUser}]]', voce nao tem permissao para acessar esta pagina.</div>
+            <p><a href="/" th:href="@{/}">Voltar</a></p>
+        </div>
+    </div>
+</body>
+</html>
