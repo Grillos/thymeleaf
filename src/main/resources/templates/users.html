@@ -8,31 +8,32 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>LOGIN</title>
+    <title>Usuarios</title>
   </head>
   <body>
     <div class="alert alert-primary" role="alert">
-        Login
+        Usuarios
     </div>  
     
     <div class="container">
 
-        <form th:action="@{/login}" th:object="${user}" method="post">
-            <div class="form-group">
-                <label for="username">Usuario</label>
-                <input type="text" class="form-control" th:value="*{username}" id="username" aria-describedby="usernameHelp" placeholder="Digite o Usuario">
-                <small id="usernameHelp" class="form-text text-muted">Preencha seu usuario!</small>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="password" class="form-control" th:field="*{password}" id="password" aria-describedby="passwordHelp" placeholder="Digite a Senha">
-                <small id="passwordHelp" class="form-text text-muted">Preencha sua senha.</small>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Entrar</button>
-
-        </form>
+        <table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Usuario</th>
+		      <th scope="col">Senha</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="user : ${users}">
+		      <th scope="row" th:text="${user.id}"></th>
+		      <td th:text="${user.username}"></td>
+		      <td th:text="${user.password}"></td>
+		    </tr>
+		    
+		  </tbody>
+		</table>
     </div>
 
     <!-- Optional JavaScript -->
