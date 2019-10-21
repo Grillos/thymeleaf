@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+ <!--  fragment header -->
   <div th:replace="fragments/header :: header"></div>
   <title>Usuarios</title>
   <body>
-	    <div class="alert alert-primary" role="alert">
-	        Lista Usuarios
-	    </div>  
+        <!-- fragment menu -->
+  	    <div th:replace="fragments/menu :: menu"></div>
+	   
+	    
 	    
 	    <div class="container">
 	
@@ -31,7 +33,7 @@
 	    <div class="container">
 	    	<a class="btn btn-primary float-right" th:href="@{/users}" role="button">Cadastrar</a>
 	    </div>
-	    
+	   <!--  fragment footer -->
 	    <div th:replace="fragments/footer :: footer"></div>
   </body>
 </html>
