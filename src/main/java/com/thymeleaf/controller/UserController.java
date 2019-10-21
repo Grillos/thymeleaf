@@ -11,26 +11,21 @@ import com.thymeleaf.domain.User;
 import com.thymeleaf.service.UserService;
 
 @Controller
-public class LoginController {
+public class UserController {
 	
 	@Autowired
-	UserService UserService;
+	UserService userService;
 
-    @GetMapping
+    @GetMapping("/users")
     public String get(Model model) {
     	model.addAttribute("user", new User());
-        return "login";
+        return "users";
     }
     
-    @PostMapping("/login")
-    public String login(@ModelAttribute User user, Model model) {
-    	model.addAttribute("users", UserService.findAll());
+    @PostMapping("/users")
+    public String save(@ModelAttribute User user, Model model) {
+    	userService.save(user);
+    	model.addAttribute("users", userService.findAll());
         return "list-users";
     }
-
-    @GetMapping("/access-denied")
-    public String accessDenied() {
-        return "error/access-denied";
-    }
-    
 }
