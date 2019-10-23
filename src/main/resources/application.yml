@@ -9,10 +9,6 @@ spring:
     mode: HTML
     prefix: classpath:/templates/
     suffix: .html
-    # excluded-view-names:
-    # template-resolver-order:
-    # view-names:
-    
   jpa:
     show-sql: true
     database: MYSQL
