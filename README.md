@@ -1,5 +1,5 @@
 ## Projeto Web Spring Boot + Thymeleaf
-O projeto contem um exemplo de como realizar um CRUD em um banco de dados relacional, utilizando as seguintes tecnologias: Java, Spring Boot, Thymeleaf, Mysql
+O projeto contem um exemplo de como realizar um CRUD em um banco de dados relacional, utilizando as seguintes tecnologias: Java, Spring Boot, Maven, Thymeleaf, Mysql
  
 ## Configurações do projeto
 docker:
