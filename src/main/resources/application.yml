@@ -19,6 +19,6 @@ spring:
       format_sql: true
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/thymeleaf?createDatabaseIfNotExist=true&useSSL=false
-    username: root
+    url: jdbc:mysql://localhost:3306/user?createDatabaseIfNotExist=true&useSSL=false
+    username: thymeleaf
     password: r4cc00n
